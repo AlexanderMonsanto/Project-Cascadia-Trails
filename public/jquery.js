@@ -35,15 +35,16 @@ $(function(){
 
             }, 20);
 
-
-});
-
             $(function() {
                 $(".paragraphs").hover(function(){
                     $(this).show();
                 }, function () {
                     $(this).hide();
-                }
+                });
             });
 
 });
+
+
+
+
