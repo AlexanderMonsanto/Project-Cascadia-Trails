@@ -1,0 +1,22 @@
+<% include partials/header.ejs %>
+
+
+
+<% for(var i=0; i<place.length; i++) { %>
+
+<p>
+  <a href="/trails?name=<%= place[i].name %>&city=<%= place[i].city%>&uniqueid=<%= place[i].unique_id%>"><h3> <span class="glyphicon glyphicon-flag"> </span> <%= place[i].name%></h3></a>
+  <h4><%= place[i].city%>, <%= place[i].state%></h4>
+  <% if(place[i].description) { %>
+  <%= place[i].description %>
+  <% } else { %>
+  <p>"Needs Description"</p>
+  <% } %><br>
+  <%= place[i].directions%><br>
+</p>
+<br><br>
+<% } %>
+
+
+
+<% include partials/footer.ejs %>

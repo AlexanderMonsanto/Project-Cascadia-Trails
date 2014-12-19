@@ -1,0 +1,88 @@
+#map-canvas {
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+#trailimage {
+  max-width: 275px;
+  max-height: 350px;
+
+}
+
+#body {
+  background-image: url('/images/sahale-trail.jpg');
+
+}
+
+body {
+/*  background-image: url('/images/sahale-trail.jpg');
+  background-size: cover;*/
+}
+
+div.panel-default {
+  background-color: rgba(200,200,200,0.5)
+}
+
+div.thumbnail {
+  background-color: rgba(200,200,200,0.5)
+}
+
+div.home {
+  display: inline-flex;
+  float: left;
+}
+
+div.topic {
+  float: right;
+}
+
+#selectstate {
+  margin: 10px;
+}
+
+#myLocationBtn {
+  margin: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: black;
+}
+
+*, div {
+  /*border: 2px solid #f0f;*/
+}
+
+.user-info {
+  padding-top: 20px;
+}
+
+.paragraphs{
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  background: rgba(0,0,0,0.5);
+  left: 0;
+  padding: 20px;
+  transition: opacity 0.5s;
+}
+.thumbnail{
+  position: relative;
+}
+.thumbnail:hover .paragraphs, .thumbnail:focus .paragraphs{
+  opacity: 1;
+}
+.links {
+  padding-top: 80px;
+  font-size: 14px;
+}
+
+.navbar-form {
+  padding: 0px !important;
+}

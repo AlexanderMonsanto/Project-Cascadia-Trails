@@ -1,0 +1,15 @@
+<% include partials/header.ejs %>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  <image src="<%= mypicture %>.png">
+
+  <h5>Update Profile Pic</h5>
+  <form action="/foto" name="title" method="post" enctype="multipart/form-data" >
+    <input type="file" name="picture">
+    <br><br>
+    <input type="submit">
+  </form>
+  </div>
+</div>
+<% include partials/footer.ejs %>

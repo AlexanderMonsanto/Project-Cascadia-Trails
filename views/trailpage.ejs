@@ -1,0 +1,33 @@
+<% include partials/header.ejs %>
+<div class="col-md-4">
+  <h4><%= place.name %> </h4>
+  <h5>City, Province/State</h5> <%= place.city %>, <%= place.state %><br>
+  <h5>Description</h5> <%= place.description %><br>
+  <h5>Directions</h5> <%= place.directioins %><br>
+  <form action="/favoritesav" method="post">
+    <input type="hidden" name="unique" value="<%= place.unique_id %>">
+    <input type="hidden" name="name" value="<%= place.name %>">
+    <input type="hidden" name="city" value="<%= place.city %>">
+    <input type="submit" class="btn btn-primary" value="Favorite">
+  </form>
+</div>
+<div class="col-md-4">
+    <% if(place.activities[0].thumbnail){ %>
+  <img src="<%= place.activities[0].thumbnail %>" id="trailimage"><br>
+  <% } else { %>
+  <h5>No Images</h5>
+  <% } %>
+</div>
+  <div id="map-canvas" class="col-md-4 align-right"></div>
+
+<script>
+  initializeMap(<%= place.lat %>,<%= place.lon %>,"<%= place.name %>");
+</script>
+
+<% include partials/footer.ejs %>
+
+<!--
+/req.body = post data
+req.params /route/:id
+req.query = ?kajdf=akdlfja
+ -->

@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link href="/stylesheet.css" type="text/css" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <title>Cascadia Trails Project</title>
+  <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key="<%=process.env.gmap%>>
+  </script>
+  <script src="/locate.js"></script>
+  <script type="/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://bootswatch.com/superhero/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <h1>The Cascadia Trails Project</h1>
+            <form action="/search" method="get" class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" name="city" value="" placeholder="Enter City, Province/State">
+              <input type="submit" class="btn"id="selectstate" value="Find Trails" >
+            </div>
+            </form>
+            <form action="/search" method="get" class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="hidden" name="lat" id="latField" value="">
+                <input type="hidden" name="lng" id="lngField" value="">
+                <input type="submit" class="btn" id="myLocationBtn" value="Find My Location" style="display:none;">
+              </div>
+            </form>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left links">
+            <li class=""><a href="/home">Home</a></li>
+            <li><a href="/favorites">Favorites</a></li>
+            <li class=""><a href="/profile">Profile</a></li>
+            <li class="divider"></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <%if(user){ %>
+            <img class="" src="http://res.cloudinary.com/dcpshbipx/image/upload/c_fill,h_80,r_max,w_80/user_<%= user.id %>.png"><br>
+            <a href="/auth/logout" class="btn btn-success">Log Out</a>
+            <% } else {%>
+            <a href='/auth/login' class="btn btn-success">Log In</a>
+            <% } %>
+        </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+      <% include alerts.ejs %>
+

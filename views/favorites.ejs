@@ -1,0 +1,24 @@
+<% include partials/header.ejs %>
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">My Favorite Trails</h3>
+  </div>
+  <div class="panel-body">
+    <% favtrails.forEach(function(trail){ %>
+
+
+
+           <span class="glyphicon glyphicon-tree-conifer"></span> <a href="/trails?name=<%= trail.name %>&city=<%= trail.city%>&uniqueid=<%= trail.trailId%>"><%= trail.name %></a><br>
+
+
+
+    <% }) %>
+  </div>
+</div>
+
+
+
+
+
+<% include partials/footer.ejs %>
