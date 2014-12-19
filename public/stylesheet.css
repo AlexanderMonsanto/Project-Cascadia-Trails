@@ -78,7 +78,7 @@ ul {
 a.logout {
   margin-bottom: 10px;
 }
-div.container-fluid {
+#container-fluid {
   background-image: url('/images/Tohoma1.jpg');
   background-size: cover;
 }
