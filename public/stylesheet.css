@@ -13,20 +13,6 @@
 
 #body {
   background-image: url('/images/sahale-trail.jpg');
-
-}
-
-body {
-/*  background-image: url('/images/sahale-trail.jpg');
-  background-size: cover;*/
-}
-
-div.panel-default {
-  background-color: rgba(200,200,200,0.5)
-}
-
-div.thumbnail {
-  background-color: rgba(200,200,200,0.5)
 }
 
 div.home {
@@ -50,9 +36,6 @@ ul {
   list-style: none;
 }
 
-li {
-  color: black;
-}
 
 *, div {
   /*border: 2px solid #f0f;*/
@@ -67,7 +50,7 @@ li {
   overflow: hidden;
   position: absolute;
   padding: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
   left: 0;
   padding: 20px;
   transition: opacity 0.5s;
@@ -89,3 +72,18 @@ li {
 .home {
   margin: auto;
 }
+.pic {
+  margin: 10px;
+}
+a.logout {
+  margin-bottom: 10px;
+}
+div.container-fluid {
+  background-image: url('/images/Tohoma1.jpg');
+  background-size: cover;
+}
+#head {
+  text-decoration: none;
+  color: white;
+}
+

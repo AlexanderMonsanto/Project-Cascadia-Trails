@@ -23,7 +23,7 @@
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <h1>The Cascadia Trails Project</h1>
+        <h1><a href='/home' id="head">The Cascadia Trails Project</a></h1>
             <form action="/search" method="get" class="navbar-form navbar-left" role="search">
             <div class="form-group">
               <input type="text" name="city" value="" placeholder="Enter City, Province/State">
@@ -48,8 +48,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <%if(user){ %>
-            <img class="" src="http://res.cloudinary.com/dcpshbipx/image/upload/c_fill,h_80,r_max,w_80/user_<%= user.id %>.png"><br>
-            <a href="/auth/logout" class="btn btn-success">Log Out</a>
+            <a href="/profile"><img class="pic" src="http://res.cloudinary.com/dcpshbipx/image/upload/c_fill,h_60,r_max,w_60/user_<%= user.id %>.png"></a><br>
+            <a href="/auth/logout" class="btn btn-success logout">Log Out</a>
             <% } else {%>
             <a href='/auth/login' class="btn btn-success">Log In</a>
             <% } %>
