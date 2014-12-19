@@ -3,6 +3,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link href="/stylesheet.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/superstyle.css">
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
@@ -11,10 +13,12 @@
 <body id="body">
   <% include partials/alerts.ejs %>
   <div class="container">
-    <div class="jumbotron">Welcome to the Official Cascadia Trails Site</div>
+    <h1>Welcome to the Official Cascadia Trails Site</h1>
+    <div class="home">
 
-    <a href="/auth/login" class="btn btn-primary">Login</a>
-    <a href="/auth/signup" class="btn btn-primary">Signup</a>
+    <a href="/auth/login" class="btn btn-success">Login</a>
+    <a href="/auth/signup" class="btn btn-success">Signup</a>
+    </div>
   </div>
 </body>
 </html>

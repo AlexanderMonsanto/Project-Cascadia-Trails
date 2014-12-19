@@ -179,9 +179,9 @@ app.get('/search',function(req, res){
 
         .header("X-Mashape-Key", process.env.trailsapi2)
         .end(function (result) {
-      console.log(result.body.places)
+      // console.log(result.body.places)
       var place = result.body.places
-      res.send(place);
+      // res.send(place);
       res.render('search', {place: place});
       })
       } else {
