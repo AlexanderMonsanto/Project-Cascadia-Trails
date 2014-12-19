@@ -187,6 +187,7 @@ app.get('/search',function(req, res){
       // console.log(result.body.places)
       var place = result.body.places
       // res.send(place);
+      console.log('-------- API RESULT',result);
       res.render('search', {place: place});
       })
       } else {
