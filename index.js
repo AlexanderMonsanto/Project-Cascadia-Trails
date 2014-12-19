@@ -163,9 +163,14 @@ app.get('/search',function(req, res){
     lookUpTrails(req.query.lat,req.query.lng);
   }else{
     geocoder.geocode(req.query.city, function ( err, data ) {
-      var citylat = data.results[0].geometry.location.lat
-      var citylng = data.results[0].geometry.location.lng
-      lookUpTrails(citylat,citylng);
+      if(data && data.results && Array.isArray(data.results) && data.results.length > 0){
+        var citylat = data.results[0].geometry.location.lat
+        var citylng = data.results[0].geometry.location.lng
+        lookUpTrails(citylat,citylng);
+      }else{
+        req.flash('error',"invalid city");
+        res.redirect('/home');
+      }
     });
   }
 

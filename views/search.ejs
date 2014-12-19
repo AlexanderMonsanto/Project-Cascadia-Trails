@@ -1,7 +1,7 @@
 <% include partials/header.ejs %>
 
 
-
+<% if(Array.isArray(place)){ %>
 <% for(var i=0; i<place.length; i++) { %>
 
 <p>
@@ -16,7 +16,8 @@
 </p>
 <br><br>
 <% } %>
-
-
+<% } else { %>
+  No results.
+<% } %>
 
 <% include partials/footer.ejs %>
