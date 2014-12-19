@@ -181,7 +181,7 @@ app.get('/search',function(req, res){
         .end(function (result) {
       console.log(result.body.places)
       var place = result.body.places
-      // res.send(place);
+      res.send(place);
       res.render('search', {place: place});
       })
       } else {
